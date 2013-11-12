@@ -1,0 +1,85 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StoreDetailActivity" >
+
+  <!--   <ImageView
+        android:id="@+id/imageView_store_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:adjustViewBounds="true"
+        android:contentDescription="desc"
+        tools:ignore="HardcodedText" />--> 
+    
+    <TextView
+         android:id="@+id/textView_store_address_title"
+         android:layout_width="match_parent"
+         android:layout_height="20dp"
+         android:layout_alignParentLeft="true"
+         android:layout_marginTop="20dp"
+         android:layout_marginLeft="10dp"
+          android:layout_marginRight="10dp"
+         android:text="@string/textView_store_name_txt"
+         android:textSize="18sp" />
+    
+    
+    <LinearLayout
+        android:id="@+id/linearLayout_store_directions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:layout_below="@+id/textView_store_address_title"
+        android:orientation="vertical"
+        android:background="@drawable/border" >
+           
+        <TextView
+            android:id="@+id/textView_store_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textSize="14sp" />
+        
+    </LinearLayout>
+    
+     <TextView
+         android:id="@+id/textView_store_schedule_title"
+         android:layout_width="match_parent"
+         android:layout_height="20dp"
+         android:layout_alignParentLeft="true"
+         android:layout_marginTop="10dp"
+         android:layout_marginLeft="10dp"
+          android:layout_marginRight="10dp"
+         android:text="@string/textView_store_schedule_txt"
+         android:layout_below="@+id/linearLayout_store_directions"
+         android:textSize="18sp" />
+    
+    
+    <LinearLayout
+        android:id="@+id/linearLayout_store_schedule"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:layout_below="@+id/textView_store_schedule_title"
+        android:orientation="vertical"
+        android:background="@drawable/border" >
+           
+        <TextView
+            android:id="@+id/textView_store_schedule"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:padding="10dp" />
+        
+    </LinearLayout>
+
+    
+     
+
+</RelativeLayout>
