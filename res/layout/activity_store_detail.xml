@@ -78,7 +78,35 @@
             android:padding="10dp" />
         
     </LinearLayout>
+ 
+    
+    <RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/linearLayout_store_schedule"
+	    android:layout_margin="5dp"
+	    android:padding="5dp" 
+	    android:background="@drawable/border">
 
+	    
+	   <ImageView
+        android:id="@+id/imageView_gallery"
+        android:layout_width="0dp"
+	    android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+	    android:layout_toLeftOf="@+id/textView_gallery_txt" 
+	    android:contentDescription="@string/textView_gallery_txt"
+	    android:src="@drawable/ic_button_picture"/>
+
+        <TextView
+            android:id="@+id/textView_gallery_txt"
+            android:layout_width="100dp"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+            android:textSize="18sp"
+            android:text="@string/textView_gallery_txt"/>
+
+	</RelativeLayout>
     
      
 

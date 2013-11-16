@@ -7,5 +7,6 @@
     <string name="title_activity_store_detail">StoreDetailActivity</string>
     <string name="textView_store_name_txt">Address</string>
     <string name="textView_store_schedule_txt">Schedule</string>
+    <string name="textView_gallery_txt">Gallery</string>
 
 </resources>
