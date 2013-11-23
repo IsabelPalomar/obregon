@@ -8,5 +8,10 @@
     <string name="textView_store_name_txt">Address</string>
     <string name="textView_store_schedule_txt">Schedule</string>
     <string name="textView_gallery_txt">Gallery</string>
+    <string name="textView_phone_txt">Call</string>
+    <string name="textView_website_txt">Website</string>
+    <string name="textView_email_txt">Send Email</string>
+    <string name="textView_store_actions_txt">Actions</string>
+    <string name="title_activity_store_gallery">StoreGallery</string>
 
 </resources>

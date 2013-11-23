@@ -15,7 +15,8 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.isabelpalomar.obregon.activities.StoresActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:launchMode="singleTop" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -29,6 +30,14 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.isabelpalomar.obregon.activities.StoresActivity" />
+        </activity>
+        <activity
+            android:name="com.isabelpalomar.obregon.activities.StoreGallery"
+            android:label="@string/title_activity_store_gallery"
+            android:parentActivityName="com.isabelpalomar.obregon.activities.StoreDetailActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.isabelpalomar.obregon.activities.StoreDetailActivity" />
         </activity>
     </application>
 

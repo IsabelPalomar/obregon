@@ -6,17 +6,24 @@ import com.isabelpalomar.obregon.R.menu;
 import com.isabelpalomar.obregon.data.DummyData;
 import com.isabelpalomar.obregon.models.Store;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.support.v4.app.NavUtils;
+import android.text.util.Linkify;
 import android.annotation.TargetApi;
+import android.content.Intent;
 import android.os.Build;
 
 public class StoreDetailActivity extends Activity {
+	
+	Integer phone;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -40,13 +47,47 @@ public class StoreDetailActivity extends Activity {
 		TextView schedule  = (TextView) findViewById(R.id.textView_store_schedule);
 		schedule.setText(store.getSchedule());
 		
+		TextView url  = (TextView) findViewById(R.id.textView_website_txt);
+		url.setText(store.getUrl());
+		Linkify.addLinks(url, Linkify.ALL);
+		
+		TextView email  = (TextView) findViewById(R.id.textView_email_txt);
+		email.setText(store.getEmail());
+		Linkify.addLinks(email, Linkify.ALL);
+		
+		//get the phone
+		this.phone = store.getPhone();
+		
 		//set the title
 		setTitle(store.getName());
-		
 		
 		// Show the Up button in the action bar.
 		setupActionBar();
 	}
+	
+	
+	//click methods ********************************************************************************+
+	 
+	 public void showGallery(View v)
+	 {
+		 //go to Store Gallery Activity
+		 Intent in = new Intent(getApplicationContext(), StoreGallery.class);
+		 in.putExtras(getIntent().getExtras());
+         startActivity(in);
+		 
+	 } 
+	 
+	 public void makeCall(View v)
+	 {
+		   
+		    //call on keyboard
+		    Intent intent = new Intent(Intent.ACTION_DIAL);
+			intent.setData(Uri.parse("tel:" + this.phone));
+			startActivity(intent);	
+		 
+	 } 
+	
+	
 
 	/**
 	 * Set up the {@link android.app.ActionBar}, if the API is available.
