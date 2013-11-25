@@ -26,7 +26,8 @@
         <activity
             android:name="com.isabelpalomar.obregon.activities.StoreDetailActivity"
             android:label="@string/title_activity_store_detail"
-            android:parentActivityName="com.isabelpalomar.obregon.activities.StoresActivity" >
+            android:parentActivityName="com.isabelpalomar.obregon.activities.StoresActivity"
+            android:launchMode="singleTop"  >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.isabelpalomar.obregon.activities.StoresActivity" />

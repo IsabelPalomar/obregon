@@ -13,5 +13,7 @@
     <string name="textView_email_txt">Send Email</string>
     <string name="textView_store_actions_txt">Actions</string>
     <string name="title_activity_store_gallery">StoreGallery</string>
+    <string name="textView_store_comments_txt">Comments</string>
+    <string name="textView_comment_txt">Cupcake ipsum dolor sit amet candy canes powder. Macaroon chocolate halvah tart cake topping sesame snaps. I love dessert gummi bears tart dragée chocolate cake.</string>
 
 </resources>

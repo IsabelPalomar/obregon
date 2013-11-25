@@ -3,11 +3,14 @@ package com.isabelpalomar.obregon.activities;
 import com.isabelpalomar.obregon.R;
 import com.isabelpalomar.obregon.R.layout;
 import com.isabelpalomar.obregon.R.menu;
+import com.isabelpalomar.obregon.data.DummyData;
+import com.isabelpalomar.obregon.models.Store;
 
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.support.v4.app.NavUtils;
 import android.annotation.TargetApi;
 import android.os.Build;
@@ -18,6 +21,20 @@ public class StoreGallery extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_store_gallery);
+		
+		//get and set the title
+	    Bundle b = getIntent().getExtras();
+		int store_id    = b.getInt("store_id");
+		
+		//get the element
+		Store store = DummyData.stores[store_id];
+		
+		ImageView iv = (ImageView) findViewById(R.id.imageView_store_image);
+		iv.setBackgroundResource(store.getImage());
+		
+		setTitle(store.getName() + " Gallery");
+		
+		
 		// Show the Up button in the action bar.
 		setupActionBar();
 	}
